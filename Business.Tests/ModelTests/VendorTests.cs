@@ -66,6 +66,6 @@ namespace Business.Tests
       newVendor.AddOrder(newOrder);
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(newList, result);
-    }
+    } 
   }
 }
