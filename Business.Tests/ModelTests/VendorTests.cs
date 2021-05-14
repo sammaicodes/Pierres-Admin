@@ -12,11 +12,19 @@ namespace Business.Tests
     {
       Vendor.ClearAll();
     }
-  [TestMethod]
-  public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
-  {
-    Vendor newVendor = new Vendor("test", "test");
-    Assert.AreEqual(typeof(Vendor), newVendor.GetType());
-  }
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("test", "test");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      string name = "Test Vendor";
+      Vendor newVendor = new Vendor(name, "test");
+      string result = newVendor.Description;
+      Assert.AreEqual(name, result);
+    }
   }
 }
