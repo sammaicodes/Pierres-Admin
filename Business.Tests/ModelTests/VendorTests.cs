@@ -32,7 +32,7 @@ namespace Business.Tests
       string name = "Test Vendor";
       Vendor newVendor = new Vendor(name, "test");
       int result = newVendor.Id;
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
   }
 }
