@@ -55,5 +55,17 @@ namespace Business.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
+        [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string description = "Deliver by 5am";
+      Order newOrder = new Order("test", description, "test", "test");
+      List<Order> newList = new List<Order> { newOrder, newOrder };
+      string name = "Doppio Cafe";
+      Vendor newVendor = new Vendor(name, "test");
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
