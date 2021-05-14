@@ -41,7 +41,7 @@ namespace Business.Tests
       string name02 = "North Shore Cafe";
       Vendor newVendor1 = new Vendor(name01, "test");
       Vendor newVendor2 = new Vendor(name02, "test");
-      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor1 };
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
