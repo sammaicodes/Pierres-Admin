@@ -34,7 +34,21 @@ namespace Business.Test
       Assert.AreEqual(description, result2);
       Assert.AreEqual(date, result3);
       Assert.AreEqual(price, result4);
-      
+    }
+      [TestMethod]
+    public void SetUpdatedName_SetUpdate_String()
+    {
+      //Arrange
+      string name = "Country Cafe";
+      Order newOrder = new Order(name, "test", "test", "test" );
+
+      //Act
+      string updatedName = "Old Fashioned Cafe";
+      newOrder.Name = updatedName;
+      string result = newOrder.Name;
+
+      //Assert
+      Assert.AreEqual(updatedName, name);
     }
 
   }
