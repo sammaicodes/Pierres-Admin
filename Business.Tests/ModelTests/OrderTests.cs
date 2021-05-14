@@ -48,7 +48,7 @@ namespace Business.Test
       string result = newOrder.Name;
 
       //Assert
-      Assert.AreEqual(updatedName, name);
+      Assert.AreEqual(updatedName, result);
     }
 
   }
