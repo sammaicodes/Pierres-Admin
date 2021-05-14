@@ -6,7 +6,7 @@ using System;
 namespace Business.Test
 {
   [TestClass]
-  public class OrderTests //:IDisposable
+  public class OrderTests//:IDisposable
   {
     // public void Dispose()
     // {
@@ -35,21 +35,22 @@ namespace Business.Test
       Assert.AreEqual(date, result3);
       Assert.AreEqual(price, result4);
     }
-      [TestMethod]
+    [TestMethod]
     public void SetUpdatedName_SetUpdate_String()
     {
-      //Arrange
       string name = "Country Cafe";
       Order newOrder = new Order(name, "test", "test", "test" );
-
-      //Act
       string updatedName = "Old Fashioned Cafe";
       newOrder.Name = updatedName;
       string result = newOrder.Name;
-
-      //Assert
       Assert.AreEqual(updatedName, result);
     }
-
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> {};
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
