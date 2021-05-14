@@ -34,5 +34,16 @@ namespace Business.Tests
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      string name01 = "Doppio Cafe";
+      string name02 = "North Shore Cafe";
+      Vendor newVendor1 = new Vendor(name01, "test");
+      Vendor newVendor2 = new Vendor(name02, "test");
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor1 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
