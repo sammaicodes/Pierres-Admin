@@ -45,5 +45,15 @@ namespace Business.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name01 = "Work";
+      string name02 = "School";
+      Vendor newVendor1 = new Vendor(name01, "test");
+      Vendor newVendor2 = new Vendor(name02, "test");
+      Vendor result = Vendor.Find(1);
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }
