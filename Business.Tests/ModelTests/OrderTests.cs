@@ -69,7 +69,7 @@ namespace Business.Test
       string name = "Doppio Cafe";
       Order newOrder = new Order(name, "test", "test", "test");
       int result = newOrder.Id;
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
   }
 }
