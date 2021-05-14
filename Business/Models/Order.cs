@@ -12,9 +12,14 @@ namespace Business.Models
       public int Id { get; }
       public List<Order> Orders { get; set; }
     
-    public Order(string description)
+    public Order(string name, string description, string date, string price)
     {
+      Name = name;
       Description = description;
+      Date = date;
+      Price = price;
+      _instances.Add(this);
+      Id = _instances.Count;
     }
   }
 }
