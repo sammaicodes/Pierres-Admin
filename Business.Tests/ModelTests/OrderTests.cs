@@ -78,7 +78,7 @@ namespace Business.Test
       string name02 = "Uplifted Cafe";
       Order newOrder1 = new Order(name01, "test", "test", "test");
       Order newOrder2 = new Order(name02, "test", "test", "test");
-      Order result = Order.Find(1);
+      Order result = Order.Find(2);
       Assert.AreEqual(newOrder2, result);
     }
   }
