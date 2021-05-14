@@ -60,7 +60,7 @@ namespace Business.Test
       string name02 = "Bubbas Cafe";
       Order newOrder1 = new Order(name01, "test", "test", "test");
       Order newOrder2 = new Order(name02, "test", "test", "test");
-      List<Order> newList = new List<Order> { newOrder1, newOrder1 };
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       //Act
       List<Order> result = Order.GetAll();
