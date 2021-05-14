@@ -60,7 +60,7 @@ namespace Business.Tests
     {
       string description = "Deliver by 5am";
       Order newOrder = new Order("test", description, "test", "test");
-      List<Order> newList = new List<Order> { newOrder, newOrder };
+      List<Order> newList = new List<Order> { newOrder };
       string name = "Doppio Cafe";
       Vendor newVendor = new Vendor(name, "test");
       newVendor.AddOrder(newOrder);
