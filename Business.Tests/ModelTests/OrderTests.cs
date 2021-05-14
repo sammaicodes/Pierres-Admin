@@ -55,18 +55,21 @@ namespace Business.Test
     [TestMethod]
     public void GetAll_ReturnsOrders_OrderList()
     {
-      //Arrange
       string name01 = "Doppio Cafe";
       string name02 = "Bubbas Cafe";
       Order newOrder1 = new Order(name01, "test", "test", "test");
       Order newOrder2 = new Order(name02, "test", "test", "test");
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
-
-      //Act
       List<Order> result = Order.GetAll();
-
-      //Assert
       CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string name = "Doppio Cafe";
+      Order newOrder = new Order(name, "test", "test", "test");
+      int result = newOrder.Id;
+      Assert.AreEqual(2, result);
     }
   }
 }
