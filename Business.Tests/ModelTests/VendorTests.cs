@@ -23,7 +23,7 @@ namespace Business.Tests
     {
       string name = "Test Vendor";
       Vendor newVendor = new Vendor(name, "test");
-      string result = newVendor.Description;
+      string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
   }
