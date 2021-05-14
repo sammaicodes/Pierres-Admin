@@ -30,7 +30,7 @@ namespace Business.Test
       string result2 = newOrder.Description;
       string result3 = newOrder.Date;
       string result4 = newOrder.Price;
-      Assert.AreEqual(name, result2);
+      Assert.AreEqual(name, result1);
       Assert.AreEqual(description, result2);
       Assert.AreEqual(date, result3);
       Assert.AreEqual(price, result4);
