@@ -71,5 +71,15 @@ namespace Business.Test
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
+        [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string name01 = "Dirty Finger Cafe";
+      string name02 = "Uplifted Cafe";
+      Order newOrder1 = new Order(name01, "test", "test", "test");
+      Order newOrder2 = new Order(name02, "test", "test", "test");
+      Order result = Order.Find(1);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
