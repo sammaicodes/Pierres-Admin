@@ -39,7 +39,7 @@ namespace Business.Test
     public void SetUpdatedName_SetUpdate_String()
     {
       string name = "Country Cafe";
-      Order newOrder = new Order(name, "test", "test", "test" );
+      Order newOrder = new Order(name, "test", "test", "test");
       string updatedName = "Old Fashioned Cafe";
       newOrder.Name = updatedName;
       string result = newOrder.Name;
@@ -50,6 +50,22 @@ namespace Business.Test
     {
       List<Order> newList = new List<Order> {};
       List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      //Arrange
+      string name01 = "Doppio Cafe";
+      string name02 = "Bubbas Cafe";
+      Order newOrder1 = new Order(name01, "test", "test", "test");
+      Order newOrder2 = new Order(name02, "test", "test", "test");
+      List<Order> newList = new List<Order> { newOrder1, newOrder1 };
+
+      //Act
+      List<Order> result = Order.GetAll();
+
+      //Assert
       CollectionAssert.AreEqual(newList, result);
     }
   }
