@@ -16,7 +16,7 @@ namespace Business.Tests
   public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
   {
     Vendor newVendor = new Vendor("test", "test");
-    Assert.AreEqual(typeof(Order), newVendor.GetType());
+    Assert.AreEqual(typeof(Vendor), newVendor.GetType());
   }
   }
 }
