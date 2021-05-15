@@ -5,14 +5,14 @@ namespace Business.Models
   public class Order
   {
       private static List<Order> _instances = new List<Order> {};
-      public string Name { get; set; }
+      public string OrderName { get; set; }
       public string Description { get; set; }
       public string Date { get; set; }
-      public string Price { get; set; }   //Might need to be an integer
+      public string Price { get; set; }  
       public int Id { get; }
     public Order(string name, string description, string date, string price)
     {
-      Name = name;
+      OrderName = name;
       Description = description;
       Date = date;
       Price = price;

@@ -26,7 +26,7 @@ namespace Business.Test
       string date = "5/14/2021";
       string price = "0.5 per croissant";
       Order newOrder = new Order(name, description, date, price);
-      string result1 = newOrder.Name;
+      string result1 = newOrder.OrderName;
       string result2 = newOrder.Description;
       string result3 = newOrder.Date;
       string result4 = newOrder.Price;
@@ -41,8 +41,8 @@ namespace Business.Test
       string name = "Country Cafe";
       Order newOrder = new Order(name, "test", "test", "test");
       string updatedName = "Old Fashioned Cafe";
-      newOrder.Name = updatedName;
-      string result = newOrder.Name;
+      newOrder.OrderName = updatedName;
+      string result = newOrder.OrderName;
       Assert.AreEqual(updatedName, result);
     }
     [TestMethod]

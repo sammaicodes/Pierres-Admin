@@ -23,7 +23,7 @@ namespace Business.Tests
     {
       string name = "Test Vendor";
       Vendor newVendor = new Vendor(name, "test");
-      string result = newVendor.Name;
+      string result = newVendor.VendorName;
       Assert.AreEqual(name, result);
     }
     [TestMethod]
@@ -48,8 +48,8 @@ namespace Business.Tests
     [TestMethod]
     public void Find_ReturnsCorrectVendor_Vendor()
     {
-      string name01 = "Work";
-      string name02 = "School";
+      string name01 = "Doppio Cafe";
+      string name02 = "North Shore Cafe";
       Vendor newVendor1 = new Vendor(name01, "test");
       Vendor newVendor2 = new Vendor(name02, "test");
       Vendor result = Vendor.Find(2);
