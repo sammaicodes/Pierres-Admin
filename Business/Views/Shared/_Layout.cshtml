@@ -2,12 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My To-Do List!</title>
+    <title>Pierre's Bakery Admin!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
-  <body>
-    @RenderBody()
+  <body style='background-image:url(https://littlefrancebakery.com/wp-content/uploads/2019/04/Slider_little_france_bakery_3.png)'>
+    <div class="container" style="color:yellow">
+      <div class="text-center border border-warning">
+      <h1  style='color: #FFFF00'>Pierre's Bakery Admin</h1>
+      <br>
+      <br>
+
+        @RenderBody()
+      
+      </div>
+    </div>
     @Html.Partial("Footer")
   </body>
 </html>

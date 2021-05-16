@@ -1,15 +1,22 @@
 @using Business.Models;
+@{
+  Layout = "_Layout";
+}
 
 <h3>Here are all the orders from @Model["vendor"].VendorName:</h3>
-
-<ol>
-@foreach (Order order in @Model["orders"])
-{
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderName</a></li>
-}
-</ol>
+<div class="container">
+  <div class="jumbotron" style="color:brown">
+    <ol>
+    @foreach (Order order in @Model["orders"])
+    {
+      <li style="background:#FDFD96"><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderName</a></li>
+    }
+    </ol>  
+  </div>
+</div>
 
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
 <p><a href='/vendors'>Return to vendors list</a></p>
 <p><a href='/'>Return to Main Page</a></p>
 
+@Html.Partial("Footer")
